@@ -1,0 +1,393 @@
+@charset "UTF-8";
+
+/* 全体の設定 ここから */
+body { 
+ margin: 0;
+ padding: 0;
+ color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+a:visited {
+  color: #333;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin-top: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+/* 全体の設定 ここまで */
+
+/* ヘッダー ナビ ここから */
+.header {
+  background-color: rgba(255, 255, 255, 0.9);
+  position: fixed;
+  width: 100%;
+  top: 0; /* topは上に固定表示させるために必要 */
+  z-index: 1000; /* z-indexは手前に表示させるために必要。値が大きいものがより手前に表示される。*/
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  width: 80%; /* 80%のままだと左に寄ってしまうので、左右に均等なマージンを取って中央寄せ*/
+  margin: 0 auto;
+  align-items: center; /*高さを中央寄せ*/
+}
+
+.hamburger-menu { /* PC版の時には非表示*/
+  display: none;
+}
+
+.header-navi {
+  list-style-type: none;
+}
+
+.header-navi li {
+  display: inline; /* ブロック要素liをinlineにして横並びにする*/
+}
+
+.header-logo a {
+  font-weight: bold;
+  color: #333;
+  font-size: 30px;
+  font-family: fantasy;
+}
+
+.header-logo a:hover {
+  opacity: 0.5;
+}
+
+.header-navi li a {
+  color: #333;
+  font-size: 15px;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+.header-navi li a:hover {
+  opacity: 0.5;
+}
+
+.current a {
+  display: inline-block;
+  border-bottom: solid 2px #333;
+}
+/* ヘッダー ナビ ここまで */
+
+/* ヘッダー 画像 ここから */
+.cover-message {
+  background-image: url(../img/info_photo.jpg);
+  height: 40vh; /* vhはブラウザの高さを意味し、数値はパーセント*/
+  background-size: cover;
+  position: relative; /* 親要素 */
+  background-position: center 70%;
+ }
+/* ヘッダー 画像 ここまで */
+
+/* INFO ここから */
+
+.info-title {
+  text-align: center;
+  color: #333;
+  margin-top: 50px;
+}
+
+.title-border { 
+  width: 5%;
+  height: 1px;
+  background-color: #333;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.info-explain {
+  width: 60%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.info-explain h3 {
+  border-left: 3px solid #333;
+  padding: 4px 9px 4px 14px;
+}
+
+.info-each-title {
+  margin-top: 50px;
+}
+
+table {
+  width: 100%;
+}
+
+table th {
+  width: 10%;
+  padding: 15px;
+  border-bottom: dashed 1px #333;
+  text-align: left;
+  font-weight: normal;
+}
+
+table td {
+  width: 90%;
+  padding: 0 80px;
+  border-bottom: dashed 1px #333;
+}
+
+.google-map { /* 埋め込み要素の親要素 */
+  position: relative;
+  width: 100%;
+  height: 0; /* 高さを0にする */
+  padding-top: 60%; /* 代わりに上の余白に高さにしたい数値を指定 */
+}
+
+.google-map iframe { /* 子要素 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* INFO ここまで */
+
+/* フッター ここから */
+ 
+ .footer-navi ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   text-align: center;
+ }
+
+ .footer {
+  background-color: #333;
+  text-align: center;
+  margin-top: 50px;
+ }
+
+ .footer-navi {
+   background-color: #f0f0f0;
+   padding: 20px 0;
+ }
+
+ .footer-navi li {
+  display: inline;
+  border-left: solid 1px #333;
+  margin-left: 10px;
+  padding-left: 10px;
+ }
+
+ .footer-navi li a{
+   color: #333;
+   font-size: 10px;
+ }
+
+ .footer-navi li a:hover {
+  opacity: 0.5;
+ }
+
+ .footer-navi li:last-child {
+   border-right: solid 1px #333;
+   padding: 0 10px;
+ }
+
+.footer small {
+  display: block;
+  padding: 10px 0;
+  color: #fff;
+}
+/* フッター ここまで */
+
+/* TOPに戻るボタン ここから */
+#top-btn {
+  position: relative;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 45px;
+  right: 25px;
+  
+  width: 50px;
+  height: 50px;
+  border-radius: 35px;
+  line-height: 50px;
+  text-align: center;
+  background-color: #f0f0f0;
+  color: #333;
+  font-weight: bold;
+  border: solid 1px #333;
+  opacity: 0.5;
+}
+
+#back-to-top:hover {
+  background-color: #333;
+  color: #fff;
+}
+/* TOPに戻るボタン ここまで */
+
+/* iPad版 */
+@media (max-width:1200px) {
+  /* ヘッダーナビここから */
+  .hamburger-menu { /* iPad版の時には表示*/
+    display: block;
+  }
+
+  .header-navi {
+    display: none;
+  }
+
+  .header-logo {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    top: 3px;
+    left: 0;
+  }
+
+  .header-inner {
+    width: 100%;
+    text-align: left;
+    position: relative;
+    top: 0px;
+    left: 10px;
+  }
+
+  /* ヘッダー ナビ ここまで */
+
+  /* ハンバーガーメニュー 編集 ここから */
+  .drawer-hamburger { /* アイコン位置の調整 */
+    padding-top: 10px;
+    padding-right: 10px;
+  }
+
+  .drawer--right.drawer-open .drawer-hamburger { /* ×印の位置変更 */
+      right: 0px;
+  }
+
+  .drawer-nav { /* メニューの背景色の変更 */
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .drawer-overlay { /* コンテンツ部分にかかる色の変更 */
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  /* ハンバーガーメニュー 編集 ここまで */
+  
+  /* ヘッダー 画像 ここから */
+  .cover-message {
+    height: 0; /* heightを0にしてpadding-topで高さをとる */
+    padding-top: 40%; /* 高さをとる */
+    background-repeat: no-repeat;
+    background-position: center center;
+   }
+  /* ヘッダー 画像 ここまで */
+
+   /* INFO ここから */
+
+   .info-explain {
+    width: 75%;
+  }
+
+  table th {
+    width: 25%;
+    padding: 10px;
+   }
+
+  table td {
+    width: 75%;
+    padding: 5px;
+  }
+
+  /* INFO ここまで */
+  
+  /* フッター ここから */
+   
+   .footer-navi ul {
+     list-style-type: none;
+     margin: 0;
+     padding: 0;
+     text-align: center;
+   }
+  
+   .footer {
+    background-color: #333;
+    text-align: center;
+    margin-top: 50px;
+   }
+  
+   .footer-navi {
+     background-color: #f0f0f0;
+     padding: 20px 0;
+    
+   }
+  
+   .footer-navi ul li {
+    margin: 0;
+    padding: 0;
+    display: block;
+    border:none;
+   }
+
+   .footer-navi li:last-child {
+     padding: 0px;
+     margin: 0;
+     border: none;
+   }
+  
+  .footer small {
+    display: block;
+    padding: 10px 0;
+    color: #fff;
+  }
+  /* フッター ここまで */
+  
+  /* TOPに戻るボタン ここから */
+  #back-to-top {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+  }
+  
+  /* TOPに戻るボタン ここまで */
+}
+
+/* スマホ版 */
+@media (max-width:700px) {
+  /* ヘッダー 画像 ここから */
+  .cover-message {
+    height: 0; /* heightを0にしてpadding-topで高さをとる */
+    padding-top: 60%; /* 高さをとる */
+    background-repeat: no-repeat;
+    background-position: center center;
+   }
+  /* ヘッダー 画像 ここまで */
+
+  /* INFO ここから */
+
+  .info-explain {
+    width: 90%;
+  }
+
+  table th {
+    width: 30%;
+    padding: 10px 0px;
+    font-size: 13px;
+  }
+
+  table td {
+    width: 70%;
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  /* INFO ここまで */
+}

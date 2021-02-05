@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CONTACT - Cafe Hangout</title>
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <!-- Font Awesomeの読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+  <body class="drawer drawer--right">
+    <!-- ヘッダー ナビ ここから -->
+    <div class="header">
+      <div class="header-inner">
+        <div class="header-logo"><a href="index.html">Cafe Hangout</a></div>
+        <!-- ハンバーガーボタン -->
+        <div class="hamburger-menu">
+          <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span>
+          </button>
+          <!-- ナビデーションの中身（SP版） -->
+          <nav class="drawer-nav" role="navigation">
+            <ul class="drawer-menu">
+              <li><a class="drawer-brand" href="#">Menu</a></li>
+              <li><a class="drawer-menu-item" href="index.html#about">ABOUT</a></li>
+              <li><a class="drawer-menu-item" href="system.html">SYSTEM</a></li>
+              <li><a class="drawer-menu-item" href="faq.html">FAQ</a></li>
+              <li><a class="drawer-menu-item" href="info.html">INFO</a></li>
+              <li><a class="drawer-menu-item" href="recruit.html">RECRUIT</a></li>
+              <li><a class="drawer-menu-item" href="#">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ナビゲーションの中身（PC版）-->
+        <ul class="header-navi">
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="system.html">SYSTEM</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="info.html">INFO</a></li>
+          <li><a href="recruit.html">RECRUIT</a></li>
+          <li class="current"><a href="#">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ヘッダー ナビ ここまで -->
+    <!-- ヘッダー 画像 ここから -->
+    <div class="cover-message">
+    </div>
+    <!-- ヘッダー 画像 ここまで -->
+    <!-- CONTACT ここから -->
+    <div class="contact-wrapper">
+      <h2 class="contact-title">CONTACT</h2>
+      <div class="title-border"></div>
+      <div class="contact-explain">
+        <h3 class="contact-each-title">お問い合わせフォーム</h3>
+        <p>お問い合わせ内容をご入力の上、「送信する」ボタンをクリックしてください。</p>
+        <form action="complete.html" method="post">
+          <table class="form-table">
+            <tbody>
+              <tr>
+                <th><label for="name">名前</label></th>
+                <td><input id="name" type="text" name="name" size="35" value="" placeholder="山田太郎">
+                </td>
+              </tr>
+              <tr>
+                <th><label for="email">メールアドレス</label></th>
+                <td><input id="email" type="email" name="email" size="35" value="" placeholder="example@example.com">
+                </td>
+              </tr>
+              <tr>
+                <th><label for="contact-item">お問い合わせ項目</label></th>
+                <td>
+                  <select id="contact-item" name="contact-item">
+                    <option vlaue="contact-item" selected>お問い合わせ項目を選択してください。</option>
+                    <option value="recruit">求人について</option>
+                    <option value="cafe">カフェについて</option>
+                    <option value="book">予約申し込み</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <th><label for="contact-content">お問い合わせ内容</label></th>
+                <td class="border-bottom-display"><textarea id="contact-content" name="contact-content" cols="60" rows="10"placeholder="お問い合わせ内容を入力してください。"></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="submit-btn">
+            <input type="submit" value="送信する">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- CONTACT ここまで -->
+    <!-- フッター ここから -->
+    <div class="footer">
+      <div class="footer-navi">
+        <ul>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="system.html">SYSTEM</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="info.html">INFO</a></li>
+          <li><a href="recruit.html">RECRUIT</a></li>
+          <li><a href="#">CONTACT</a></li>
+      </ul>
+      </div>
+      <small>&copy; 2020 Cafe Hangout All rights reserved.</small>
+      <div id="top-btn" class="top">
+        <a href="#" id="back-to-top"><i class="fas fa-arrow-up fa-lg"></i></a>
+      </div>
+    </div>
+    <!-- フッター ここまで -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- その他のライブラリのJavaScript -->
+    <!-- iScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

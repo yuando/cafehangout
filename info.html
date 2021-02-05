@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>INFO - Cafe Hangout</title>
+    <!-- drawer.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/css/drawer.min.css">
+    <link rel="stylesheet" href="css/info.css">
+    <!-- Font Awesomeの読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+  </head>
+  <body class="drawer drawer--right">
+    <!-- ヘッダー ナビ ここから -->
+    <div class="header">
+      <div class="header-inner">
+        <div class="header-logo"><a href="index.html">Cafe Hangout</a></div>
+        <!-- ハンバーガーボタン -->
+        <div class="hamburger-menu">
+          <button type="button" class="drawer-toggle drawer-hamburger">
+            <span class="sr-only">toggle navigation</span>
+            <span class="drawer-hamburger-icon"></span>
+          </button>
+          <!-- ナビデーションの中身（SP版） -->
+          <nav class="drawer-nav" role="navigation">
+            <ul class="drawer-menu">
+              <li><a class="drawer-brand" href="#">Menu</a></li>
+              <li><a class="drawer-menu-item" href="index.html#about">ABOUT</a></li>
+              <li><a class="drawer-menu-item" href="system.html">SYSTEM</a></li>
+              <li><a class="drawer-menu-item" href="faq.html">FAQ</a></li>
+              <li><a class="drawer-menu-item" href="#">INFO</a></li>
+              <li><a class="drawer-menu-item" href="recruit.html">RECRUIT</a></li>
+              <li><a class="drawer-menu-item" href="contact.html">CONTACT</a></li>
+            </ul>
+          </nav>
+        </div>
+        <!-- ナビゲーションの中身（PC版）-->
+        <ul class="header-navi">
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="system.html">SYSTEM</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li class="current"><a href="#">INFO</a></li>
+          <li><a href="recruit.html">RECRUIT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- ヘッダー ナビ ここまで -->
+    <!-- ヘッダー 画像 ここから -->
+    <div class="cover-message">
+    </div>
+    <!-- ヘッダー 画像 ここまで -->
+    <!-- INFO ここから -->
+    <div class="info-wrapper">
+      <h2 class="info-title">INFO</h2>
+      <div class="title-border"></div>
+      <div class="info-explain">
+        <h3 class="info-each-title">店舗詳細</h3>
+        <table>
+          <tr>
+            <th>住所</th><td>〒 123-4567 東京都 〇〇区〇〇町 1-23</td>
+          </tr>
+          <tr>
+            <th>電話番号</th><td>123-456-789</td>
+          </tr>
+          <tr>
+            <th>営業時間</th><td>10:00-20:00</td>
+          </tr>
+          <tr>
+            <th>座席数</th><td>50席</td>
+          </tr>
+          <tr>
+            <th>その他</th><td>フリーWiFi完備</td>
+          </tr>
+        </table>
+        <h3 class="info-each-title">アクセス</h3>
+        <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.8278533985695!2d139.76493611561574!3d35.68124053757811!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2sTokyo%20Station!5e0!3m2!1sen!2sjp!4v1605496297867!5m2!1sen!2sjp" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+      </div>
+    </div>
+    <!-- INFO ここまで -->
+    <!-- フッター ここから -->
+    <div class="footer">
+      <div class="footer-navi">
+        <ul>
+          <li><a href="index.html#about">ABOUT</a></li>
+          <li><a href="system.html">SYSTEM</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#">INFO</a></li>
+          <li><a href="recruit.html">RECRUIT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      </div>
+      <small>&copy; 2020 Cafe Hangout All rights reserved.</small>
+      <div id="top-btn" class="top">
+        <a href="#" id="back-to-top"><i class="fas fa-arrow-up fa-lg"></i></a>
+      </div>
+    </div>
+    <!-- フッター ここまで -->
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- その他のライブラリのJavaScript -->
+    <!-- iScroll -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/iScroll/5.1.3/iscroll.min.js"></script>
+    <!-- drawer.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/drawer/3.2.1/js/drawer.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
